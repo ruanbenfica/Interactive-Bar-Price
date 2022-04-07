@@ -9,6 +9,7 @@
  - Desktop and Mobile Design
  - Challenge by Frontend Mentor
  - Only HTML, CSS and JavaScript
+ - Avaliable at https://ruanbenfica.github.io/Interactive-Bar-Price/
 
 
 ### Desktop Design 
