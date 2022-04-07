@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="slider.js"></script>
+    <title>Interactive Price</title>
+</head>
+
+<body>
+    <div class="container">
+        <section class="text-top">
+            <h1>Simple, traffic-based pricing </h1>
+            <p>Sign-up for our 30-day trial. No credit card required</p>
+        </section>
+        <section class="card-price">
+            <div class="top-side">
+                <div class="prices">
+
+                    <div id="page-views-price">
+                        <span id="page-views-value">10K</span>
+                        <p id="page-views">PAGEVIEWS </p>
+                    </div>
+                    <div id="value-desktop">
+                        <span class="price-month-year-value">$1.6</span>
+                        <p class="price-month-year">/ month</p>
+                    </div>
+                </div>
+                <div class="slide-bar">
+                    <input class="slider" id="slider-price" type="range" min="1" max="100" value="1" oninput="Color()">
+                </div>
+
+                <div id="value-mobile">
+                    <span class="price-month-year-value">$1.6</span>
+                    <p class="price-month-year">/ month</p>
+                </div>
+
+                <div class="month-year">
+                    <span>Monthly Billing</span>
+                    <div class="switch__container">
+                        <input id="switch-flat" class="switch switch--flat" type="checkbox" onchange="Color()">
+                        <label for="switch-flat"></label>
+                    </div>
+                    <span id="yearly">Yearly Billing</span>
+
+                </div>
+
+
+            </div>
+
+            <div class="bottom-side">
+                <div id="text-details">
+                    <p>Unlimited websites</p>
+                    <p>100% data ownership</p>
+                    <p>Email reports</p>
+
+                </div>
+                <div id="start-trial">
+                    <a href=""><button type="button">Start my trial</button></a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+/*font-family: 'Manrope', sans-serif; */
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: url(images/bg-pattern.svg) no-repeat;
+    background-size: 100% 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 50%;
+    height: 85%;
+    max-height: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-top {
+    height: 145px;
+    text-align: center;
+    background: url(images/pattern-circles.svg) no-repeat;
+    background-position: top;
+}
+
+.text-top h1 {
+    color: hsl(227, 35%, 25%);
+    font-size: 1.7em;
+    margin-bottom: 10px;
+}
+
+.text-top p {
+    color: hsl(225, 20%, 60%);
+    font-size: 0.9em;
+}
+
+.card-price {
+    height: 400px;
+    width: 80%;
+    background-color: hsl(0, 0%, 100%);
+    display: grid;
+    grid-template-rows: 64% 36%;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.44);
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.44);
+}
+
+.card-price .prices {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.card-price .prices p {
+    margin: 0 0 0 5px;
+}
+
+.card-price .prices div {
+    display: flex;
+    align-items: center;
+}
+
+.card-price .prices #page-views-price {
+    color: hsl(225, 20%, 60%);
+}
+
+.card-price .price-month-year-value {
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 5px;
+    color: hsl(227, 35%, 25%);
+}
+
+.card-price .price-month-year {
+    color: hsl(225, 20%, 60%);
+}
+
+.slide-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.slider {
+    appearance: none;
+    width: 80%;
+    height: 10px;
+    border-radius: 10px;
+    background: rgb(214, 214, 214);
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: hsl(174, 86%, 45%);
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: 49% 50%;
+}
+
+.slider::-webkit-slider-thumb::before {
+    background: red;
+}
+
+.switch__container {
+    width: 50px;
+    margin: 0px 15px;
+}
+
+.switch {
+    visibility: hidden;
+    position: absolute;
+    margin-left: -9999px;
+}
+
+.switch+label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+
+/* Estilo Flat */
+
+.switch--flat+label {
+    padding: 2px;
+    width: 40px;
+    height: 20px;
+    border-radius: 50%;
+    transition: background 0.4s;
+}
+
+.switch--flat+label:before,
+.switch--flat+label:after {
+    display: block;
+    position: absolute;
+    content: "";
+}
+
+.switch--flat+label:before {
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: hsl(0, 0%, 72%);
+    border-radius: 10px;
+    transition: background 0.4s;
+}
+
+.switch--flat+label:after {
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    width: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: margin 0.4s, background 0.4s;
+}
+
+.switch--flat:checked+label:before {
+    background: hsl(174, 86%, 45%);
+}
+
+.switch--flat:checked+label:after {
+    margin-left: 20px;
+}
+
+.month-year {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: hsl(225, 20%, 60%);
+}
+
+.month-year #yearly::after {
+    position: absolute;
+    content: '25% discount';
+    color: hsl(15, 100%, 70%);
+    background-color: hsl(14, 92%, 95%);
+    font-size: 10px;
+    padding: 3px;
+    margin-left: 10px;
+}
+
+.bottom-side {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-top: 1px solid hsl(225, 20%, 60%);
+}
+
+.bottom-side #text-details {
+    margin: auto auto;
+}
+
+.bottom-side #text-details p {
+    font-size: 13px;
+    color: hsl(225, 20%, 60%);
+}
+
+.bottom-side #text-details p::before {
+    content: url(images/icon-check.svg);
+    margin-right: 10px;
+}
+
+.bottom-side #start-trial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-side #start-trial button {
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    border-style: none;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: hsl(227, 35%, 25%);
+    color: hsl(225, 20%, 60%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bottom-side #start-trial button:hover {
+    transform: scale(1.1);
+    background-color: hsl(228, 34%, 33%);
+    color: white;
+}
+
+#value-mobile {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 80%;
+    }
+    .card-price {
+        width: 90%;
+    }
+}
+
+@media (max-width: 620px) {
+    /* Design Mobile*/
+    .container {
+        width: 90%;
+        height: 95%;
+    }
+    .text-top {
+        height: 145px;
+        text-align: center;
+    }
+    .text-top h1 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+    .text-top p {
+        color: hsl(225, 20%, 60%);
+        font-size: 0.7em;
+    }
+    .card-price {
+        height: 500px;
+        grid-template-rows: 60% 40%;
+    }
+    #value-desktop {
+        display: none;
+    }
+    #value-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    #value-mobile .price-month-year-value {
+        font-size: 30px;
+    }
+    .month-year #yearly::after {
+        content: '-25%';
+    }
+    .bottom-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top: 1px solid hsl(225, 20%, 60%);
+    }
+    .bottom-side #start-trial button {
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    .bottom-side #text-details {
+        margin: none;
+        text-align: center;
+    }
+}
+
+@media (max-width: 460px) {
+    .month-year span {
+        font-size: 10px;
+        word-wrap: inherit;
+    }
+    .month-year #yearly::after {
+        position: relative;
+        margin-left: 5px;
+    }
+    .switch__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 3px;
+    }
+}
